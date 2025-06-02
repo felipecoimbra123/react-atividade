@@ -52,15 +52,20 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFFACC',
       },
       title: {
-        fontSize: 24,
+        fontSize: 50,
+        fontFamily: '"Abel" serif',
+        fontWeight: 300,
         marginBottom: 20,
-        textAlign: "center",
+        textTransform: 'uppercase',
+        fontWeight: 500,
+        textAlign: 'center'
       },
       input: {
         borderWidth: 1,
-        borderColor: "#ccc",
+        borderColor: "black",
         marginBottom: 12,
         padding: 10,
         borderRadius: 5,
+        backgroundColor: '#FFFFFF'
       },
 });
