@@ -13,7 +13,7 @@ export default function EditScreen({ navigation, route }) {
     const {id, username, email, placa, cor, modelo} = route.params.user
 
     const [form, setForm] = useState({
-        username: username, password: password, email: email,
+        username: username, password: '', email: email,
         placa: placa, cor: cor, modelo: modelo
     })
 
@@ -33,6 +33,13 @@ export default function EditScreen({ navigation, route }) {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Editar</Text>
+            <TextInput style={styles.input} placeholder="Username" onChangeText={(input) => handleChange('username', input)} value={form.username}/>
+            <TextInput style={styles.input} placeholder="Senha" onChangeText={(input) => handleChange('password', input)} value={form.password}/>
+            <TextInput style={styles.input} placeholder="E-mail" onChangeText={(input) => handleChange('email', input)} value={form.email}/>
+            <TextInput style={styles.input} placeholder="Placa" onChangeText={(input) => handleChange('placa', input)} value={form.placa}/>
+            <TextInput style={styles.input} placeholder="Cor" onChangeText={(input) => handleChange('cor', input)} value={form.cor}/>
+            <TextInput style={styles.input} placeholder="Modelo" onChangeText={(input) => handleChange('modelo', input)} value={form.modelo}/>
+            <Button title="Editar" onPress={handleSubmit}/>
         </View>
     )
 }
