@@ -31,7 +31,8 @@ export default function CadastroScreen({ navigation }) {
 
     return (
         <View style={styles.container}>
-            {['username', 'email', 'password', 'placa', 'cor', 'modelo'].map((field) => (
+            <Text style={styles.title}> Cadastrar </Text>
+            {['Username', 'E-mail', 'Password', 'Placa', 'Cor', 'Modelo'].map((field) => (
                 <TextInput
                     key={field}
                     placeholder={field}
@@ -41,6 +42,7 @@ export default function CadastroScreen({ navigation }) {
                 />
             ))}
             <Button title='Cadastrar' onPress={handleSubmit} />
+            <Text style={styles.link} onPress={() => navigation.navigate('Login')}> Login </Text>
         </View>
     )
 }
@@ -54,7 +56,23 @@ const styles = StyleSheet.create({
     input:{
         borderWidth: 1,
         marginBottom: 10,
-        padding: 10,
-        borderRadius: 5
+        padding: 15,
+        fontSize: 18,
+        borderRadius: 10,
+        fontWeight: 300
+    },
+    title: {
+        fontSize: 50,
+        fontFamily: '"Abel" serif',
+        fontWeight: 300,
+        marginBottom: 20,
+        textTransform: 'uppercase',
+        fontWeight: 500,
+        textAlign: 'center'
+    },
+    link: {
+        marginTop: 20,
+        color: 'blue',
+        textAlign: 'center',
     }
 })

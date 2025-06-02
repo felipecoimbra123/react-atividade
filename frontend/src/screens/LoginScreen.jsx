@@ -43,17 +43,23 @@ const styles = StyleSheet.create({
     input: {
         borderWidth: 1,
         marginBottom: 10,
-        padding: 10,
-        borderRadius: 5
+        padding: 15,
+        fontSize: 18,
+        borderRadius: 10,
+        fontWeight: 300
     },
     title: {
-        fontSize: 24,
+        fontSize: 50,
+        fontFamily: '"Abel" serif',
+        fontWeight: 300,
         marginBottom: 20,
+        textTransform: 'uppercase',
+        fontWeight: 500,
         textAlign: 'center'
     },
     link: {
         marginTop: 20,
         color: 'blue',
-        textAlign: 'center'
+        textAlign: 'center',
     }
 })
