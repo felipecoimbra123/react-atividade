@@ -57,5 +57,10 @@ export default function VagasScreen({ route }) {
 }
 
 const styles = StyleSheet.create({
-    card: {padding:15, borderWidth:1, borderRadius:8, marginBottom:10}
+    card: {
+        padding:15, 
+        borderWidth:1, 
+        borderRadius:8, 
+        marginBottom:10
+    },
 })
