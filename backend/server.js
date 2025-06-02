@@ -11,6 +11,7 @@ const port = 3030
 //cadastro de user
 app.post('/cadastro', (req, res) => {
     const { username, password, email, placa, cor, modelo } = req.body
+    console.log(req.body);
     const query = 'INSERT INTO users (username, password, email, placa, cor, modelo) VALUES (?, ?, ?, ?, ?, ?)'
     connection.query(query, [username, password, email, placa, cor, modelo], (err, result) => {
         if(err){

@@ -43,3 +43,24 @@ export default function EditScreen({ navigation, route }) {
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        padding: 20,
+        flexGrow: 1,
+        justifyContent: "center",
+        backgroundColor: '#FFFACC',
+      },
+      title: {
+        fontSize: 24,
+        marginBottom: 20,
+        textAlign: "center",
+      },
+      input: {
+        borderWidth: 1,
+        borderColor: "#ccc",
+        marginBottom: 12,
+        padding: 10,
+        borderRadius: 5,
+      },
+});

@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { listarVagas, ocuparVaga, desocuparVaga } from "../services/api";
 
-export default function VagasScreen({ route }) {
+export default function VagasScreen({ route, navigation }) {
     const [vagas, setVagas] = useState([])
     //route chama o valor do usuário (variavel user) que veio junto com a rota
     const userId = route.params.user.id
@@ -34,8 +34,11 @@ export default function VagasScreen({ route }) {
 
     useEffect(() => { fetchVagas() }, [])
 
+
+    
     const renderItem = ({ item }) => (
         <View style={styles.card}>
+              <Text style={styles.link} onPress={() => navigation.navigate("Edit", { user: route.params.user })}>Editar Conta</Text>
             <Text> Vaga #{item.id} - {item.preferencial_int ? 'Preferencial' : 'Comum'} </Text>
             <Text> Disponível: {item.disponivel ? 'Sim' : 'Não'} </Text>
             {item.disponivel ? (
@@ -61,6 +64,12 @@ const styles = StyleSheet.create({
         padding:15, 
         borderWidth:1, 
         borderRadius:8, 
-        marginBottom:10
+        marginBottom:10,
+        backgroundColor: '#FFFACC'
+    },
+    link: {
+        marginTop: 20,
+        color: 'blue',
+        textAlign: 'center',
     },
 })

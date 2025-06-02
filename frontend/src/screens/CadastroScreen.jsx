@@ -19,9 +19,9 @@ export default function CadastroScreen({ navigation }) {
 
     const handleSubmit = async () => {
         const result = await cadastrar(form)
-        console.log(form);
         
         if (result.success) {
+            console.log(form);
             Alert.alert('Sucesso', result.message)
             navigation.navigate('Login')
         } else {
@@ -32,7 +32,7 @@ export default function CadastroScreen({ navigation }) {
     return (
         <View style={styles.container}>
             <Text style={styles.title}> Cadastrar </Text>
-            {['Username', 'E-mail', 'Password', 'Placa', 'Cor', 'Modelo'].map((field) => (
+            {['username', 'password', 'email', 'placa', 'cor', 'modelo'].map((field) => (
                 <TextInput
                     key={field}
                     placeholder={field}
@@ -51,13 +51,15 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        padding: 20
+        padding: 20,
+        backgroundColor: '#FFFACC'
     },
     input:{
         borderWidth: 1,
         marginBottom: 10,
         padding: 15,
         fontSize: 18,
+        backgroundColor: '#FFFFFF',
         borderRadius: 10,
         fontWeight: 300
     },

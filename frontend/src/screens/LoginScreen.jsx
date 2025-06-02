@@ -38,7 +38,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        padding: 20
+        padding: 20,
+        backgroundColor: '#FFFACC'
     },
     input: {
         borderWidth: 1,
@@ -46,6 +47,7 @@ const styles = StyleSheet.create({
         padding: 15,
         fontSize: 18,
         borderRadius: 10,
+        backgroundColor: '#FFFFFF',
         fontWeight: 300
     },
     title: {
